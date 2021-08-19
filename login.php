@@ -5,12 +5,7 @@ $username = trim($_POST["username"]);
 $password = trim($_POST["password"]);
 if (strlen($password) > 0 && strlen($username) > 0){
 
-/*
-$sql = new mysqli("localhost", "root", "Olimp110", "employels");
-if($sql->connect_error) {
-die("connetion failed: " . $sql->connect_error);
-}
-*/
+
 include 'sql.php';
 $q = "SELECT user_id, username, user_password, confirmed FROM users WHERE username = '$username' AND user_password = '$password';";
 
